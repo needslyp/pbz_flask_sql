@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Добавить сотрудника</h3>
+    <div class="box">
+        <form method="POST" action="/add_emp">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="id" name="id" placeholder="ID" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="name" name="name" placeholder="ФИО" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="post" name="post" placeholder="Должность">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="org_id" name="org_id" placeholder="ID организации">
+                </div>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth" style="background-color: #0d6efd">Добавить</button>
+            <button style="margin-top: 10px" type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="employee"'>Назад</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Добавить документ</h3>
+    <div class="box">
+        <form method="POST" action="/add_doc">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="id" name="id" placeholder="ID" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="date" name="date" placeholder="Дата регистрации" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="adresat" name="adresat" placeholder="Адресат">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="adresant" name="adresant" placeholder="Адресант">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="res_id" name="res_id" placeholder="ID резолюции">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="cont_id" name="cont_id" placeholder="ID контролера">
+                </div>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth" style="background-color: #0d6efd">Добавить</button>
+            <button style="margin-top: 10px" type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="document"'>Назад</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

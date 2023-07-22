@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Удалить</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+            {% endwith %}
+        <form method="POST" action="/drop">
+            <div style="margin-bottom: 20px">
+                <div>
+                    <input type="radio" id="contactChoice1"
+                     name="employee" value="EMPLOYEE">
+                    <label for="contactChoice1">Сотрудник</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice2"
+                    name="organization" value="ORGANIZATION">
+                    <label for="contactChoice2">Организация</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice3"
+                     name="document" value="DOCUMENT">
+                    <label for="contactChoice3">Документ</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice4"
+                           name="task" value="TASK">
+                    <label for="contactChoice3">Задача</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="id" name="id" placeholder="ID" autofocus="">
+                </div>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth" style="background-color: #0d6efd">Удалить</button>
+            <button style="margin-top: 10px" type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="/"'>Назад</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

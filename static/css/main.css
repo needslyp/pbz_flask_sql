@@ -1,0 +1,11 @@
+table {
+border-top: transparent;
+border-right: transparent;
+border-bottom: transparent;
+border-left: 3px solid black;
+height: 300px;
+}
+
+tr:nth-child(even) {
+background-color: lightblue;
+}

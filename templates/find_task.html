@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Поиск по границам</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+            {% endwith %}
+        <form method="POST" action="/find_task">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="date" name="exp_date1" placeholder="Срок исполнения" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="date" name="exp_date2" placeholder="Срок исполнения" autofocus="">
+                </div>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth" style="background-color: #0d6efd">Найти</button>
+            <button style="margin-top: 10px" type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="task"'>Назад</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom" style="margin-top: -40px">
+
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="/"'>Главная</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="add_task"'>Добавить задачу</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="update_task"'>Обновить исполнителя</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="update_task_date"'>Обновить дату исполнения</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="find_task"'>Поиск по границам</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick='location.href="drop"'>Удалить задачу</button>
+
+</header>
+
+<h2 style="margin-top: 100px">Задачи</h2>
+<div style="overflow: auto scroll; height: 300px">{{ df.to_html(classes='table table-striped text-center', justify='center') | safe}}</div>
+{% endblock %}
